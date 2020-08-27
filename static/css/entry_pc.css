@@ -1,0 +1,1383 @@
+@charset "utf-8";
+
+@media print, screen and (min-width: 751px) {
+
+	.topbar {
+		padding-bottom: 25px;
+		border-bottom: 1px solid #e8e8e8;
+		margin: -30px -20px 55px;
+	}
+	.topbar p.user {
+		float: left;
+		font-size: 15px;
+		background: url(../../common/img/icon_user2.png) no-repeat left center;
+		background-size: 36px;
+		padding: 11px 0 11px 46px;
+	}
+	.topbar p.user b {
+		display: inline-block;
+		color: #f68500;
+		margin-right: 5px;
+		text-decoration: underline;
+	}
+	.topbar p.btn {
+		float: right;
+		margin: 0 !important;
+	}
+	.topbar p.btn button {
+		font-size: 12px;
+		padding: 6px 15px 6px 25px;
+	}
+	.topbar p.btn button span {
+		background-size: 7px auto;
+		padding-right: 15px;
+	}
+	h2.ttl2 {
+		text-align: center;
+		font-size: 32px;
+		font-weight: 600;
+		color: #581c1c;
+		margin-bottom: 30px;
+		line-height: 1.4;
+	}
+	h2.ttl2 img {
+		height: 32px;
+		width: auto;
+	}
+	h2.ttl2 + p.lead {
+		font-size: 16px;
+		font-weight: 600;
+		margin-bottom: 35px;
+		line-height: 1.6;
+		text-align: center;
+	}
+	h2.ttl2 + p.lead span {
+		display: block;
+		font-size: 14px;
+		font-weight: 300;
+		color: #e40112;
+		margin-top: 12px;
+	}
+	h2.ttl2 + p.lead span::before {
+		content: "※";
+	}
+	h2.ttl + p.lead {
+		text-align: center;
+	}
+	h2.ttl + p.lead b {
+		display: block;
+		font-size: 24px;
+		margin-bottom: 20px;
+	}
+	h2.ttl + p.lead + p.note {
+		color: #e40112;
+		text-align: center;
+		margin: 35px 0 0;
+	}
+	.form .formBox dl.item {
+		padding-top: 30px;
+		display: inline-block;
+	}
+	.form .formBox dl.item dt,
+	.form .formBox dl.item dd {
+		float: left;
+	}
+	.form .formBox dl.item dt {
+		font-weight: 600;
+	}
+	.form .formBox dl.item dd {
+		width: 180px;
+		box-sizing: border-box;
+		padding-left: 30px;
+	}
+	p.backMypage {
+		text-align: center;
+		margin: 40px 0 0px;
+	}
+	p.backMypage a {
+		color: #333;
+		font-weight: 600;
+		text-decoration: none;
+		margin-left: -15px;
+	}
+	p.backMypage a::before {
+		content: "";
+		display: inline-block;
+		background: url(../../common/img/arrow_white_back.png) no-repeat center;
+		background-color: #581c1c;
+		box-shadow: 0 2px #2b0e0e;
+		background-size: 6px;
+		padding: 12px 14px 10px 8px;
+		border-radius: 15px;
+		margin-right: 7px;
+		transition: all, 0.2s ease;
+		vertical-align: text-bottom;
+	}
+	p.backMypage a:hover {
+		color: #777;
+	}
+	p.backMypage a:hover::before {
+		box-shadow: 0 0 #2ea7e0;
+		-webkit-transform: translate(0, 2px);
+						transform: translate(0, 2px);
+	}
+
+	/* loading */
+	#contentsBox.loading .inner {
+		overflow: hidden;
+	}
+	#contentsBox.loading .inner::before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 100%;
+		background: url(../../common/img/loading2.gif) no-repeat top 200px center #fff;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		transition: opacity 500ms;
+	}
+
+
+/* -----------------------------------------------------
+ form input
+----------------------------------------------------- */
+	/* .formBox */
+	.form .formBox {
+		padding: 20px 30px 70px;
+		background-color: #fbf7ef;
+		border-radius: 14px;
+	}
+	.form h2.ttl2 {
+		margin-bottom: 25px;
+	}
+	.form h2.ttl2 + p.lead {
+		margin-bottom: 30px;
+	}
+	.form h2.ttl2 + p.lead span {
+		font-size: 13px;
+		margin-top: 7px;
+		font-weight: 300;
+	}
+	.form .formBox table {
+		text-align: left;
+	}
+	.form .btn button {
+		background-color: #581c1c;
+		box-shadow: 0 3px #290909;
+	}
+	.form .btn.confirm button {
+		color: #fff;
+		/* background-color: #f68500;
+		box-shadow: 0 3px #dc6200; */
+		background-color: #ee4432;
+		box-shadow: 0 3px #cc483a;
+	}
+	.form .btn.confirm button:disabled {
+		color: #fff;
+		background-color: #d3d3d3;
+		box-shadow: none;
+		cursor: default;
+	}
+	.form .btn button:hover {
+		box-shadow: 0 0 #290909;
+	}
+	.form.btn.confirm button:hover {
+		box-shadow: 0 0px #cc483a;
+	}
+	.form .formBox table th {
+		font-size: 18px;
+	}
+	.form .formBox table td.custom {
+		padding-top: 10px;
+		padding-bottom: 40px;
+	}
+	.form .formBox table td p {
+		display: inline-block;
+		margin-right: 22px;
+	}
+	.form .formBox table td span {
+		font-size: 15px;
+		color: #1c1c1c;
+		display: inline-block;
+	}
+	.form .formBox table td p span {
+		min-width: 35px;
+	}
+	.form .formBox table tr {
+		border-bottom: 1px solid #fff;
+	}
+	.form .formBox table th {
+		width: 240px;
+		padding: 33px 0 20px 10px;
+	}
+	.form .formBox table th b {
+		font-size: 16px;
+		position: relative;
+		font-weight: 700;
+	}
+	.form.input .formBox table th b::after {
+		content: "必須";
+		display: block;
+		font-size: 13px;
+		color: #fff;
+		background-color: #e40112;
+		width: 45px;
+		padding: 5px 0;
+		border-radius: 3px;
+		position: absolute;
+		top: 0px;
+		right: -58px;
+		text-align: center;
+		font-weight: 600;
+	}
+	.form.input .formBox table .gift b::after {
+		content: none;
+	}
+	.form .formBox table th span {
+		display: block;
+		font-size: 14px;
+		font-weight: normal;
+		margin-top: 10px;
+	}
+	.form .formBox table td {
+		width: 590px;
+		padding: 20px 0;
+		vertical-align: middle;
+	}
+	.form.input .formBox table td input.size1 {
+		width: 140px;
+	}
+	.form.input .formBox table td input.size2 {
+		width: 100px;
+	}
+	.form.input .formBox table td input.size3 {
+		width: 420px;
+	}
+	.form.input .formBox table td input.size4 {
+		width: 120px;
+	}
+	.form label input[type="radio"] + span {
+		font-size: 15px;
+		height: auto;
+		line-height: 26px;
+	}
+	.form.input .formBox table td li {
+		margin-bottom: 12px;
+	}
+	.form.input .formBox table td li:first-child {
+		margin-bottom: 17px;
+	}
+	.form.input .formBox table td li:last-child {
+		margin-bottom: 0;
+	}
+	.form.input .formBox table td li span {
+		width: 100px;
+	}
+	.form.input .formBox table td li.zip span.mark {
+		width: 28px;
+	}
+	.form .formBox table td span.bar {
+		text-align: center;
+		width: 15px !important;
+	}
+	.form.input .formBox table td li p.btn {
+		margin: 0 0 0 10px;
+	}
+	.form.input .formBox table td li p.btn button {
+		font-size: 12px;
+		padding: 8px 15px;
+	}
+	.form.input .formBox table .gift figure {
+		width: 250px;
+		text-align: center;
+		margin-left: -8%;
+	}
+	.form.input .formBox table .gift figure img {
+		width: 100%;
+	}
+	.form.input .formBox .formQuestionnaire {
+		margin: 60px 0 0;
+	}
+	.form.input .formBox .formQuestionnaire .formQuestionnaireTtl {
+		font-size: 18px;
+		color: #581c1c;
+		margin: 0 0 40px;
+		text-align: left;
+		position: relative;
+		text-align: center;
+		margin-bottom: 50px;
+	}
+	.form.input .formBox .formQuestionnaire .formQuestionnaireTtl::before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 4px;
+		position: absolute;
+		left: 0;
+		top: 7px;
+		background: url(/static/common/img/line_ttl02.png) repeat left center;
+		text-align: left;
+	}
+	.form.input .formBox .formQuestionnaire .formQuestionnaireTtl span {
+		display: inline-block;
+		background-color: #fbf7ef;
+		padding-right: 12px;
+		padding-left: 12px;
+		z-index: 2;
+		position: relative;
+	}
+	.form.input .formBox .formQuestionnaire .formQuestionnaireBox {
+		padding: 0 10px;
+	}
+	.form.input .formBox .formQuestionnaire .formQuestionnaireBox + .formQuestionnaireBox.custom {
+		border-bottom: 1px solid #fff;
+		padding-bottom: 30px;
+	}
+	.form.input .formBox .formQuestionnaire .formQuestionnaireBox + .formQuestionnaireBox {
+		border-top: 1px solid #fff;
+		padding: 25px 10px 0;
+		margin: 25px 0 0;
+	}
+	.form.input .formBox .formQuestionnaire .formQuestionnaireBox dt {
+		margin: 0 0 25px;
+		color: #4b0000;
+	}
+	.form.input .formBox .formQuestionnaire .formQuestionnaireBox dt b {
+		font-size: 16px;
+		position: relative;
+	}
+	.form.input .formBox .formQuestionnaire .formQuestionnaireBox dt b::after {
+		content: "必須";
+		display: block;
+		font-size: 13px;
+		color: #fff;
+		background-color: #e40112;
+		width: 45px;
+		padding: 5px 0;
+		border-radius: 3px;
+		position: absolute;
+		top: 0px;
+		right: -60px;
+		text-align: center;
+	}
+	.form.input .formBox .formList {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		flex-wrap: wrap;
+		-webkit-box-pack: justify;
+		-ms-flex-pack: justify;
+		justify-content: space-between;
+		margin: -20px 0 0 -20px;
+	}
+	.form.input .formBox .formList li {
+		width: calc((100% / 2) - 20px);
+		margin: 20px 0 0 20px;
+		float: left;
+	}
+	.form.input .formBox .formInputOther {
+		margin: 10px 0 0;
+	}
+	.form.input .formBox .formInputOther input[type="text"] {
+		height: 30px;
+		padding: 5px 20px;
+		border: 1px solid #c9c9c9;
+	}
+	/* .terms */
+	.form.input h3 {
+		font-size: 20px;
+		color: #581c1c;
+		font-weight: bold;
+		text-align: center;
+		margin: 50px 0 25px;
+	}
+	.form .terms {
+		padding: 15px 30px;
+		border: 1px solid #d0d0d0;
+	}
+	.form .terms dl.scroll {
+		color: #1c1c1c;
+		height: 134px;
+		padding-top: 15px;
+		padding-bottom: 15px;
+		/* overflow-y: scroll; */
+	}
+	.form .terms dl dt {
+		font-size: 18px;
+		font-weight: 600;
+		margin-bottom: 15px;
+	}
+	.input .terms dl dd + dt {
+		margin-top: 30px;
+	}
+	.form .terms dl dd {
+		font-size: 15px;
+	}
+	.input .terms dl dd div {
+		font-size: 14px;
+	}
+	.input .terms dl dd div b {
+		font-weight: normal;
+		display: block;
+		margin-top: 10px;
+	}
+	.input .terms dl dd div p::before {
+		content: "・";
+		display: table-cell;
+	}
+	.input .terms dl dd div p span {
+		display: table-cell;
+	}
+	.input .terms dl dd div p + p {
+		margin-top: 10px;
+	}
+	.form .terms dl dd ul li {
+		line-height: 1.6;
+		margin-bottom: 5px;
+	}
+	.form.input .terms dl dd ul li .red {
+		color: #e60012;
+	}
+	.form.input .terms a,
+	.form.input .terms .tel {
+		color: #0084ff;
+	}
+
+	.form .terms dl dd ul.listDot {
+		margin-left: 18px;
+	}
+	.form .terms dl dd ul.listDot li::before {
+		content: "";
+		display: inline-block;
+		height: 12px;
+
+		width: 12px;
+		background-color: #cdcdcd;
+		border-radius: 6px;
+		margin: 0 6px 0 -18px;
+	}
+	.form .terms .tSite {
+		margin-top: 15px;
+	}
+	.form .terms .tSite dt {
+		font-size: 15px;
+		margin-bottom: 5px;
+	}
+	.form .terms .tSite dd {
+		line-height: 1.6;
+		text-indent: -1em;
+    	padding-left: 1em;
+	}
+	.form .terms .tSite dd:before {
+		content: "・";
+	}
+	/* check */
+	.form p.check {
+		font-size: 16px;
+		text-align: center;
+		margin: 25px 0 35px;
+	}
+	.form p.check label input[type="checkbox"] + span::before {
+		border: 1px #d0d0d0 solid;
+	}
+	.form p.check label input[type="checkbox"] + span::after {
+		background: url(/static/common/img/icon_check_red.png) no-repeat;
+		background-size: 100% auto;
+	}
+	.form .btn.confirm {
+		text-align: center;
+	}
+	.form p.backMypage {
+		margin-top: 60px;
+	}
+
+	/* -----------------------------------------------------
+	 form confirm
+	----------------------------------------------------- */
+	.form.confirm .formBox {
+		padding-bottom: 60px;
+	}
+	.form.confirm .formBox table tr {
+		border-bottom: 1px solid #fff;
+	}
+	.form.confirm .btn.back button {
+		background: #fff;
+		border: 2px solid #581c1c;
+		color: #000;
+		box-shadow: none;
+	}
+	.form.confirm .formBox table tr.gift td {
+		padding-top: 12px;
+	}
+	.form.confirm .formBox table td {
+		line-height: 1.4;
+		width: 645px;
+		padding-bottom: 35px;
+		padding-top: 35px;
+	}
+	.form.confirm .formBox table th {
+		width: 185px;
+		padding-bottom: 35px;
+		padding-top: 35px;
+	}
+	.form.confirm .formBox table th,
+	.form.confirm .formBox table td {
+		box-sizing: border-box;
+	}
+	.form.confirm .formBox .gift figure {
+		width: 250px;
+		text-align: center;
+		margin-left: -8%;
+	}
+	.form.confirm .formBox .gift figure img {
+		width: 100%;
+	}
+	.form.confirm .formBox .formQuestionnaire {
+		margin: 60px 0 0;
+	}
+	.form.confirm .formBox .formQuestionnaire .formQuestionnaireTtl {
+		font-size: 18px;
+		color: #581c1c;
+		margin: 0 0 40px;
+		text-align: left;
+		position: relative;
+	}
+	.form.confirm .formBox .formQuestionnaire .formQuestionnaireTtl::before {
+		content: "";
+		display: block;
+		width: 100%;
+		height: 10px;
+		position: absolute;
+		left: 0;
+		top: 5px;
+		background: url(/static/common/img/line_ttl.png) repeat left center;
+		text-align: left;
+	}
+	.form.confirm .formBox .formQuestionnaire .formQuestionnaireTtl span {
+		display: inline-block;
+		background-color: #f5f5f5;
+		padding-right: 15px;
+		z-index: 2;
+		position: relative;
+	}
+	.form.confirm .formBox .formQuestionnaire .formQuestionnaireBox {
+		padding: 35px 10px 0;
+	}
+	.form.confirm .formBox .formQuestionnaire .formQuestionnaireBox + .formQuestionnaireBox {
+		border-top: 1px solid #fff;
+		padding: 35px 10px 0;
+		margin: 35px 0 0;
+	}
+	.form.confirm .formBox .formQuestionnaire .formQuestionnaireBox + .formQuestionnaireBox:last-child {
+		padding-bottom: 35px;
+		border-bottom: 1px solid #fff;
+	}
+	.form.confirm .formBox .formQuestionnaire .formQuestionnaireBox dd {
+		margin: 20px 0 0;
+	}
+	.form.confirm .formBox .formQuestionnaire .formQuestionnaireBox dt b {
+		font-size: 16px;
+		position: relative;
+    }
+    .form.input .formBox .formQuestionnaireBox textarea {
+        height: 90px;
+        padding: 5px 20px;
+        border: 1px solid #c9c9c9;
+    }
+	.form.confirm .btnGroup {
+		margin-top: 55px;
+		float: left;
+	}
+	.form.confirm .btnGroup p {
+		float: right;
+	}
+	.form.confirm .btnGroup p.btn.back {
+		margin: 3px 95px 0 0;
+	}
+	.form.confirm .btnGroup p.btn.back button {
+		padding: 18px 20px 16px 20px;
+	}
+	.form.confirm .btnGroup p.btn.back button span {
+		font-size: 17px;
+		color: #333;
+		padding: 2px 0 0 15px;
+	}
+
+	/* -----------------------------------------------------
+	 complete
+	----------------------------------------------------- */
+	.complete .topbar {
+		margin-bottom: 30px;
+	}
+	.complete h2.ttl2 {
+		font-size: 30px;
+		padding-top: 30px;
+		margin-bottom: 25px;
+		color: #e60012;
+	}
+	.form.complete h2.ttl2 b {
+		font-weight: 800;
+	}
+	.complete h2.ttl2 span {
+		display: block;
+		font-size: 20px;
+		margin-top: 10px;
+		color: #000;
+		font-weight: 600;
+	}
+	.complete h2.ttl2 img {
+		height: auto;
+		width: auto;
+	}
+	.complete h2.ttl2 + p.lead {
+		line-height: 1.8;
+		margin-bottom: 20px;
+		font-weight: 400;
+	}
+	.complete dl.contact {
+		width: 675px;
+		border: 1px solid #5f3800;
+		text-align: center;
+		margin: 50px auto 40px;
+		padding-bottom: 20px;
+		border-radius: 10px;
+	}
+	.complete dl.contact dt {
+		font-size: 20px;
+		font-weight: 600;
+		color: #5f3800;
+		display: block;
+		width: 360px;
+		background-color: #fff;
+		margin: -10px auto 20px;
+	}
+	.complete dl.contact dd span {
+		display: inline-block;
+		font-weight: 400;
+		vertical-align: middle;
+	}
+	.complete dl.contact dd b {
+		display: inline-block;
+		font-size: 28px;
+		margin-left: 10px;
+		vertical-align: middle;
+	}
+	.complete dl.contact dd a,
+	.complete dl.contact dd .tel {
+		color: #333;
+		text-decoration: none;
+		font-weight: unset;
+	}
+	.complete dl.contact dd + dd {
+		font-size: 13px;
+		margin-top: 15px;
+		line-height: 1.6;
+	}
+	.complete dl.contact dd.time {
+		font-size: 13px;
+	}
+	.complete dl.contact dd.time b {
+		font-size: 14px;
+		font-weight: 600;
+		display: block;
+		margin-left: 0;
+	}
+	.complete dl.contact dd.note {
+		font-size: 12px;
+		font-weight: 400;
+		color: #000;
+		margin-top: 5px;
+	}
+	.complete .bnrs {
+		text-align: center;
+		margin-top: 45px;
+	}
+	.complete .bnrs li + li {
+		margin-top: 20px;
+	}
+	.complete .bnrs li a img {
+		-webkit-transition: 0.3s;
+		transition: 0.3s;
+	}
+	.complete .bnrs li a:hover img {
+		opacity: 0.8;
+	}
+	.complete.form .codeGet {
+		text-align: center;
+	}
+	.complete.form .codeGet p.lead {
+		font-size: 16px;
+		font-weight: 600;
+		margin-bottom: 35px;
+		line-height: 1.6;
+		text-align: center;
+	}
+	.complete.form .codeGet p.lead span {
+		display: block;
+		font-size: 16px;
+		font-weight: 500;
+		color: #333333;
+		margin-top: 12px;
+	}
+	.complete.form .codeGet p.lead b {
+		display: block;
+		font-size: 22px;
+		margin-top: 56px;
+	}
+	.complete.form .codeGet p.lead span::before {
+		display: none;
+	}
+	.complete.form .continue {
+		padding: 8px 0;
+		background-image: url(img/entry/bg_line01.png),url(img/entry/bg_line02.png);
+		background-repeat: repeat-x;
+		background-position: top left,bottom left;
+		margin: 0 -40px 50px;
+	}
+	.complete.form .continue div {
+		display: table;
+		height: 66px;
+		width: 100%;
+		background: #ffec1e url(img/entry/bg_line03.png) no-repeat center;
+	}
+	.complete.form .continue div p {
+		display: table-cell;
+		font-size: 22px;
+		font-weight: 600;
+		text-align: center;
+		vertical-align: middle;
+	}
+	.form.completet h2.ttl2 + p.lead span {
+		margin-top: 3px;
+	}
+	.complete.form .note {
+		display: block;
+		font-size: 13px;
+		font-weight: 400;
+		color: #e40112;
+		margin-top: 14px;
+	}
+	.complete.form .note::before {
+		content: "※";
+	}
+	.complete.form .codeGet h3 {
+		font-size: 24px;
+		color: #fff;
+		width: 740px;
+		margin: 0 auto 40px;
+		padding: 16px 10px;
+		background: #00bb00;
+		border-radius: 14px;
+		font-weight: 600;
+	}
+	.complete.form .codeGet .get {
+		font-size: 24px;
+		color: #e40112;
+		margin-bottom: 24px;
+		font-weight: 600;
+	}
+	.complete .codeGet .code {
+		background: #f5f5f5;
+		border-radius: 14px;
+		width: 716px;
+		padding: 60px 0;
+		margin: auto;
+	}
+	.complete.form .codeGet .code span {
+		display: inline-block;
+		font-size: 18px;
+		margin-right: 10px;
+		vertical-align: middle;
+	}
+	.complete.form codeGet .code span .pc {
+		display: inherit;
+	}
+	.complete.form .codeGet .code b {
+		display: inline-block;
+		font-size: 36px;
+		vertical-align: middle;
+	}
+	.complete.form .codeGet .btn {
+		margin-top: 30px;
+	}
+	.complete.form .codeGet .btn a {
+		font-size: 21px;
+		padding: 32px 35px 30px 45px;
+		background: #00bb00;
+		box-shadow: none;
+	}
+	.complete.form .codeGet .btn a:hover {
+		-webkit-transform: translate(0, 0);
+		transform: translate(0, 0);
+		background: #008700;
+	}
+	.complete.form .codeGet .txt {
+		font-size: 16px;
+		line-height: 1.7;
+		font-weight: 600;
+		margin-top: 30px;
+	}
+	.complete.form .bnrBox {
+		margin-top: 30px;
+		text-align: center;
+	}
+	.complete.form .bnrBox a {
+		-webkit-transition: all .2s;
+		transition: all .2s;
+	}
+	.complete.form .bnrBox a:hover {
+		opacity: .8;
+	}
+	.complete.form p.backMypage {
+		margin-top: 40px;
+	}
+
+	/* -----------------------------------------------------
+	 index
+	----------------------------------------------------- */
+	#contentsBox.form.index .inner {
+		background-color: #fbf7ef;
+	}
+	.form.index .formBox table tr + tr:last-child {
+		border-bottom: 0;
+	}
+	.form.index .formBox table th {
+		padding: 20px 0 20px 10px;
+		vertical-align: middle;
+		text-align: left;
+	}
+	.form.index .formBox table td label {
+		margin-right: 20px;
+	}
+	.form.index .formBox table tr.character td label {
+		margin-right: 30px;
+	}
+	/* leave */
+	.form.index .leave {
+		text-align: center;
+		padding-top: 30px;
+	}
+	.form.index .leave p {
+		font-size: 18px;
+		font-weight: 700;
+		margin-bottom: 20px;
+	}
+	/* apply */
+	.form.index .box {
+		border: 2px solid #0869c5;
+		border-radius: 14px;
+		text-align: center;
+		padding: 62px 52px 76px;
+		width: 686px;
+		box-sizing: border-box;
+		margin: auto;
+	}
+	.form.index .box .img {
+		margin-bottom: 23px;
+	}
+	.form.index .box .point {
+		width: 554px;
+		margin: 0 auto 60px;
+		border: 2px solid #0869c5;
+		padding: 18px 16px;
+		border-radius: 14px;
+		font-size: 16px;
+		font-weight: 500;
+	}
+	.form.index .apply {
+		margin: 35px auto 0;
+		box-sizing: border-box;
+	}
+	.form.index .apply dl dt {
+		font-size: 32px;
+		color: #0869c5;
+		font-weight: 600;
+		margin-bottom: 20px;
+	}
+	.form.index .apply dl dd {
+		margin-bottom: 20px;
+	}
+	.form.index .apply span.note,
+	.win span.note {
+		font-size: 14px;
+	}
+	.form.index .apply span.note a,
+	.win span.note a {
+		color: #0084ff;
+	}
+	.form.index .apply span.note::before,
+	.win span.note::before {
+		content: "※";
+	}
+	.form.index .bgShine {
+		margin: -55px -20px 0;
+		background: #fbf7ef url(../../common/img/bg_gift01.png) no-repeat center top;
+		background-size: 100% auto;
+		padding-top: 55px;
+	}
+	.form.index .prizeLead {
+		text-align: center;
+		color: #381818;
+		font-size: 26px;
+		font-weight: 600;
+	}
+	.form.index .prize {
+		margin: 0;
+	}
+	.form.index .prize ul {
+		margin: 50px auto 0;
+	}
+	.form.index .prize ul li {
+		width: 430px;
+		float: left;
+		padding: 0 0 40px;
+		font-size: 16px;
+		color: #581c1c;
+		position: relative;
+		background-color: #fff;
+		height: 100%;
+	}
+	.form.index .prize ul li:before {
+		content: "";
+		width: 48px;
+		height: 48px;
+		border: 8px solid #333;
+		border-right: none;
+		border-top: none;
+		position: absolute;
+		left: 0;
+		bottom: 0;
+	}
+	.form.index .prize ul li:after {
+		content: "";
+		width: 48px;
+		height: 48px;
+		border: 8px solid #333;
+		border-left: none;
+		border-top: none;
+		position: absolute;
+		right: 0;
+		bottom: 0;
+	}
+	.form.index .prize ul li + li {
+		margin: 0 0 0 40px;
+	}
+	.form.index .prize ul li img {
+		width: 100%;
+	}
+	.form.index .prize ul li .prizeBoxTtl {
+		padding: 30px 0 0px;
+		position: relative;
+		z-index: 2;
+		margin-top: 0;
+		margin-bottom: 0;
+	}
+	.form.index .prize ul li .prizeBoxTtl:before {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		left: 0;
+		background: url("../common/img/bg_ttl_prize_1.png") no-repeat center / contain;
+		z-index: -1;
+		height: 185px;
+	}
+	.form.index .prize ul li .prizeBoxNote {
+		position: relative;
+		padding-top: 35px;
+	}
+	.form.index .prize ul li .prizeBoxNote:before {
+		content: "";
+		width: 48px;
+		height: 48px;
+		border: 8px solid #333;
+		border-right: none;
+		border-bottom: none;
+		position: absolute;
+		left: 0;
+		top: 0;
+	}
+	.form.index .prize ul li .prizeBoxNote:after {
+		content: "";
+		width: 48px;
+		height: 48px;
+		border: 8px solid #333;
+		border-left: none;
+		border-bottom: none;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+	.form.index .prize ul li .prizeBoxImg {
+		text-align: center;
+	}
+
+	.form.index .prize ul li .btn {
+		width: 240px;
+		margin: 30px auto 25px;
+		position: relative;
+		z-index: 3;
+	}
+	.form.index .prize ul li .btn a {
+		width: 100%;
+		padding: 17px 0;
+		text-align: center;
+		color: #581c1c;
+	}
+	.form.index .prize .btn.back button {
+		background-color: #fff;
+		box-shadow: none;
+	}
+	.form.index .prize ul li.prizeA .btn a {
+		background-color: #ee4432;
+		border: 1px solid #ee4432;
+		box-shadow: 0 3px #d42e1d;
+		color: #fff;
+	}
+	.form.index .prize ul li.prizeB .btn a {
+		background-color: #e7ab30;
+		border: 1px solid #e7ab30;
+		box-shadow: 0 3px #bc8b27;
+	}
+	.form.index .prize ul li.prizeC .btn a {
+		background-color: #8dcdcd;
+		border: 1px solid #8dcdcd;
+		box-shadow: 0 3px #72a6a6;
+	}
+	.form.index .prize ul li .btn a:hover {
+		box-shadow: none;
+	}
+	.form.index .prize ul li .btn a.disabled {
+		border: 1px solid #9a9a9a;
+	}
+	.form.index .prize ul li .btn a span {
+		background: url(../../common/img/arrow_brown.png) no-repeat center right;
+		padding: 0 25px 0 0;
+		display: inline-block;
+		min-width: inherit;
+	}
+	.form.index .prize ul li.prizeA .btn a span {
+		background: url(../../common/img/arrow_white01.png) no-repeat center right;
+	}
+	.form.index .prize ul li .btn a.disabled span {
+		background: none;
+		padding-right: 0;
+		color: #fff;
+	}
+	.form.index .prize .btn.back {
+		width: 250px;
+		margin: 40px auto 0;
+	}
+
+	/* -----------------------------------------------------
+	entry apply
+	----------------------------------------------------- */
+	.form.apply .lead {
+		font-size: 24px;
+		color: #381818;
+		font-weight: 600;
+	}
+	.form.apply .application {
+		margin-top: 60px;
+		text-align: center;
+	}
+	.form.apply .application .consume {
+		font-size: 32px;
+		font-weight: 600;
+		color: #d10000;
+		text-align: center;
+		margin-top: 45px;
+	}
+	/* .form.apply .application .apply {
+		margin-top: 50px;
+	} */
+	/* .form.apply .bgShine {
+		margin: 0 -20px;
+		background: #fff url(../../common/img/bg_shine01.png) no-repeat center top;
+	} */
+	.form.apply .bgShine {
+		margin-top: -10px;
+		margin-left: -20px;
+		margin-right: -20px;
+	}
+	.form.apply .application {
+		position: relative;
+	}
+	.form.apply .application .applicationLabel {
+		position: absolute;
+		top: 17px;
+		left: 128px;
+	}
+	.form.apply .application .applicationLabel.label2 {
+		top: 15px;
+		left: 54px;
+	}
+	.form.apply .application .apply dl dt {
+		font-size: 43px;
+		font-weight: bold;
+		color: #e60012;
+	}
+	.form.apply .application .apply {
+		padding: 35px 0 0px;
+	}
+	.form.apply .application .apply .btn {
+		display: inline-block;
+		margin: 0 5px;
+		vertical-align: top;
+	}
+	.form.apply .application .apply .btn.back button {
+		width: 170px;
+		border: 2px solid #5f3800;
+		background-color: #fff;
+		box-shadow: none;
+	}
+	.form.apply .application .apply .btn.back button:hover {
+		box-shadow: 0 0 0 2px #5f3800 inset;
+	}
+	.form.apply .application .apply .btn.back button span {
+		min-width: 80px;
+	}
+	.form.apply .application .apply .btn.light button {
+		background-color: #ee4432;
+		box-shadow: 0 3px #ad2112;
+		width: 330px;
+		padding: 19px 30px 19px 105px;
+	}
+	.form.apply .application .apply .btn.light button span {
+		background: url(../../common/img/arrow_white02.png) no-repeat center right;
+		color: #fff;
+		min-width: 120px;
+		padding: 0px 70px 0 0;
+	}
+	.form.apply .application .apply .btn.light button:hover {
+		box-shadow: 0 0 #17526e;
+	}
+	.form.apply .application .apply .note {
+		font-size: 13px;
+		width: 520px;
+		margin: 30px auto 0;
+		text-align: left;
+	}
+	.form.apply .application .apply .note li {
+		margin-bottom: 8px;
+	}
+	.form.apply .application .apply .note li:before {
+		content: "※";
+	}
+	.form.apply .application .apply .note a {
+		color: #0084ff;
+	}
+	/* -----------------------------------------------------
+	 complete win
+	----------------------------------------------------- */
+	.complete.win {
+		text-align: center;
+	}
+	.complete.win h2.ttl2 {
+		font-size: 36px;
+		font-weight: 800;
+		color: #e40112;
+		padding: 18px 0 35px;
+		background: #FFFFFF;
+		margin-bottom: 0;
+	}
+	.complete.win .inner p.btn {
+		margin: 38px 0 20px;
+	}
+	.complete.win .inner p.btn a {
+		background-color: #ee4432;
+		box-shadow: 0 3px #a51c0e;
+	}
+	.complete.win .inner p.btn a:hover {
+		box-shadow: 0 0 #581c1c;
+		-webkit-transform: translate(0, 3px);
+		transform: translate(0, 3px);
+	}
+	.complete.win p.img {
+		margin-top: 35px;
+	}
+	.complete.win .attention {
+		font-size: 18px;
+		line-height: 1.6;
+	}
+	.complete.win .lead02 {
+		font-size: 18px;
+		display: block;
+		margin-top: 35px;
+		text-decoration: underline;
+	}
+	.complete.win .note {
+		margin-top: 20px;
+	}
+	.complete.win .note .note01 {
+		color: #e40112;
+		font-size: 13px;
+		display: block;
+	}
+	.complete.win .note .note02 {
+		font-size: 13px;
+		display: block;
+		margin-top: 10px;
+	}
+	.complete.win .note .note02 a {
+		color: #0084ff;
+	}
+
+	/* -----------------------------------------------------
+	 complete lose
+	----------------------------------------------------- */
+	.complete.lose {
+		text-align: center;
+	}
+	.complete.lose h2.ttl2 {
+		font-size: 36px;
+		background: none;
+		color: #581c1c;
+		padding-top: 5px;
+		margin-bottom: 10px;
+	}
+	.complete.lose h2.ttl2 + p.lead {
+		font-size: 16px;
+		font-weight: 600;
+		margin-bottom: 25px;
+		line-height: 1.6;
+		text-align: center;
+	}
+	.complete.lose h2.ttl2 + p.lead span {
+		display: block;
+		font-size: 16px;
+		font-weight: 400;
+		color: #333333;
+		margin-top: 20px;
+	}
+	.complete.lose h2.ttl2 + p.lead b {
+		display: block;
+		font-size: 22px;
+		margin-top: 52px;
+	}
+	.complete.lose h2.ttl2 + p.lead span::before {
+		display: none;
+	}
+
+	.complete.lose .continue {
+		padding: 8px 0;
+		background-image: url(img/entry/bg_line01.png),url(img/entry/bg_line02.png);
+		background-repeat: repeat-x;
+		background-position: top left,bottom left;
+		margin: 0 -40px 50px;
+	}
+	.complete.lose .continue div {
+		display: table;
+		height: 66px;
+		width: 100%;
+		background: #ffec1e url(img/entry/bg_line03.png) no-repeat center;
+	}
+	.complete.lose .continue div p {
+		display: table-cell;
+		font-size: 22px;
+		font-weight: 600;
+		text-align: center;
+		vertical-align: middle;
+	}
+	.complete.lose .note {
+		display: block;
+		font-size: 14px;
+		font-weight: 500;
+		color: #e40112;
+		margin-top: 16px;
+	}
+	.complete.lose .note::before {
+		content: "※";
+	}
+	.complete.lose .codeGet h3 {
+		font-size: 24px;
+		color: #fff;
+		width: 740px;
+		margin: 0 auto 40px;
+		padding: 16px 10px;
+		background: #00bb00;
+		border-radius: 14px;
+		font-weight: 600;
+	}
+	.complete.lose .codeGet .get {
+		font-size: 24px;
+		color: #e40112;
+		font-weight: 600;
+		margin-bottom: 24px;
+	}
+	.complete.lose .codeGet .code {
+		background: #f5f5f5;
+		border-radius: 14px;
+		width: 716px;
+		padding: 60px 0;
+		margin: auto;
+	}
+	.complete.lose .codeGet .code span {
+		display: inline-block;
+		font-size: 18px;
+		margin-right: 10px;
+		vertical-align: middle;
+	}
+	.complete.lose .codeGet .code span .pc {
+		display: inherit;
+	}
+	.complete.lose .codeGet .code b {
+		display: inline-block;
+		font-size: 36px;
+		vertical-align: middle;
+	}
+	.complete.lose .codeGet .btn {
+		margin-top: 30px;
+	}
+	.complete.lose .codeGet .btn a {
+		font-size: 21px;
+		padding: 32px 35px 30px 45px;
+		background: #00bb00;
+		box-shadow: none;
+	}
+	.complete.lose .codeGet .btn a:hover {
+		-webkit-transform: translate(0, 0);
+        transform: translate(0, 0);
+		background: #008700;
+	}
+	.complete.lose .codeGet .txt {
+		font-size: 16px;
+		line-height: 1.7;
+		font-weight: 600;
+		margin-top: 30px;
+	}
+	.complete.lose .bnrBox {
+		margin-top: 30px;
+	}
+	.complete.lose .bnrBox a {
+		-webkit-transition: all .2s;
+		transition: all .2s;
+	}
+	.complete.lose .bnrBox a:hover {
+		opacity: .8;
+	}
+	/*.complete.lose .bnr img {
+		box-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+	}*/
+
+
+	}
+
+	.closed .bnrBox {
+		margin-top: 30px;
+	}
+	.closed .bnrBox a {
+		-webkit-transition: all .2s;
+		transition: all .2s;
+	}
+	.closed .bnrBox a:hover {
+		opacity: .8;
+	}
+}
+
+@media all and (-ms-high-contrast:none){
+	*::-ms-backdrop, p.backMypage a::before { vertical-align: text-top; } /* IE11 */
+}
