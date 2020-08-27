@@ -44,7 +44,10 @@
 		</section>
 		<section id="contentsBox" class="form confirm">
 			<div class="inner">
-				<form method="post" class="clr" action="./">
+				<form method="post" class="clr" action="./confirm">
+					<input type="hidden" name="name_sei" value="{{.Form.NameSei}}">
+					<input type="hidden" name="name_mei" value="{{.Form.NameMei}}">
+					<input type="hidden" name="email" value="{{.Form.EMail}}">
 					<input type="hidden" name="action" value="complete" />
 					<h2 class="ttl2">送付先入力フォーム</h2>
 					<p class="lead">
@@ -72,7 +75,7 @@
 							<tr>
 								<th><b>メールアドレス</b></th>
 								<td>
-									test@gpol.co.jp
+									{{.Form.EMail}}
 								</td>
 							</tr>
 							<tr>

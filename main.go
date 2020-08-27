@@ -6,6 +6,9 @@ import (
     "log"
     "net/http"
     "gopkg.in/go-playground/validator.v9"
+    //"github.com/gin-contrib/sessions"
+	//"github.com/gin-contrib/sessions/cookie"
+    //"github.com/utrack/gin-csrf"
 )
 
 type Form struct {
@@ -26,15 +29,13 @@ func main() {
 
     router.POST("/", postForm)
 
+    router.POST("/confirm", postConfirm)
+
     router.Run(":8080")
 }
 
 func postForm (c *gin.Context) {
-    form := Form{
-        NameSei: c.PostForm("name_sei"),
-        NameMei: c.PostForm("name_mei"),
-        EMail: c.PostForm("email"),
-    }
+    form := getFormData(c)
     log.Print("SEI : " , form.NameSei)
     log.Print("MEI : " , form.NameMei)
     log.Print("EMAIL : " , form.EMail)
@@ -45,6 +46,27 @@ func postForm (c *gin.Context) {
         c.HTML(http.StatusOK, "confirm.html",gin.H{"Form": form})
     }
 
+}
+
+func postConfirm(c *gin.Context) {
+    form := getFormData(c)
+    if ok, errors := form.Validate(); !ok {
+        c.HTML(http.StatusOK, "input.html", gin.H{"Form": form,"errors": errors})
+    } else {
+        // メール送信処理
+
+
+        c.HTML(http.StatusOK, "complete.html",nil)
+    }
+    
+}
+
+func getFormData(c *gin.Context) (form Form) {
+    return Form {
+        NameSei: c.PostForm("name_sei"),
+        NameMei: c.PostForm("name_mei"),
+        EMail: c.PostForm("email"),
+    }
 }
 
 func (form *Form) Validate() (ok bool, result map[string]string) {
